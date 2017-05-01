@@ -1,6 +1,6 @@
 using System;
 using System.Text;
-namespace PasswordGenerator
+namespace ConsoleApplication1
 {
     public class Config
     {
@@ -31,7 +31,7 @@ namespace PasswordGenerator
 
         public static string PasswordGenerator(Config config)
         {
-            if (config.length != 0)
+            if (config.length > 0)
             {
                 const string alphabets = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
                 const string number = "1234567890";
@@ -67,7 +67,7 @@ namespace PasswordGenerator
                 }
                 return generatedPassword.ToString();
             }
-            throw new Exception("Password Length cannot be zero");
+            throw new Exception("Length cannot be less than or equal to zero");
         }
     }
 }
