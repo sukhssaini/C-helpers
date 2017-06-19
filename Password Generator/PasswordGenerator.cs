@@ -26,7 +26,7 @@ namespace ConsoleApplication1
             Config config = new Config() { length=12 };
             var password=PasswordGenerator(config);
             Console.WriteLine(password);
-            Console.ReadLine();
+            
         }
 
         public static string PasswordGenerator(Config config)
@@ -63,7 +63,7 @@ namespace ConsoleApplication1
                 }
                 catch (Exception ex)
                 {
-                    throw ex;
+                    throw;
                 }
                 return generatedPassword.ToString();
             }
